@@ -1,0 +1,2 @@
+function Minion(cardid){
+}
