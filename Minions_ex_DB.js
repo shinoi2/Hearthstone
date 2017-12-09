@@ -12,13 +12,11 @@ var Minions_ex_DB = {
 		cost: 1,
 		type: ["Totem"],
 		YourEndTurnTrigger:[
-			function(){
+			function(obj){
 				var id;
-				if (Minions[0].indexOf(this) != -1) id=0 else id=1;
+				if (Minions[0].indexOf(obj) != -1) id=0; else id=1;
 				for (var i=0;i<Minions[id].length;i++){
-					if (Minions[id][i] != this){
-						Restore(Minions[id][i], this, 1);
-					}
+					Restore(Minions[id][i], obj, 1);
 				}
 			}
 		]
@@ -50,6 +48,7 @@ var Minions_ex_DB = {
 		name: "Spellbender",
 		attack: 1,
 		health: 3,
-		cost: 1
-	}
+		cost: 1,
+		rarity: "Epic",
+	},
 }
