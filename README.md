@@ -1,1 +1,2 @@
-# repository name
+# Hearthstone
+Power by Javascript
