@@ -1,0 +1,14 @@
+{
+	"name": "Hearthstone",
+	"version": "0.0.0",
+	"author": "shinoi",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://www.github.com/shinoi2/hearthstone"
+	},
+	"dependencies": {
+		"fs": "0.0.1-security",
+		"jquery": "^3.2.1"
+	}
+}

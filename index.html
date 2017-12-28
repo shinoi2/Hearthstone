@@ -1,16 +1,185 @@
 <html>
 	<head>
-		<script type="text/javascript" src="Game.js"></script>
-		<script type="text/javascript" src="Hero.js"></script>
-		<script type="text/javascript" src="Weapon.js"></script>
-		<script type="text/javascript" src="Hero_DB.js"></script>
-		<script type="text/javascript" src="Hero.js"></script>
-		<script type="text/javascript" src="Weapon_ex_DB.js"></script>
-		<script type="text/javascript" src="Weapon.js"></script>
-		<script type="text/javascript" src="Minions_ex_DB.js"></script>
-		<script type="text/javascript" src="Minions.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/Card.js"></script>
+		<script type="text/javascript" src="js/Game.js"></script>
+		<script type="text/javascript" src="js/Hero.js"></script>
+		<script type="text/javascript" src="js/Hero_DB.js"></script>
+		<script type="text/javascript" src="js/Minions.js"></script>
+		<script type="text/javascript" src="js/Minions_Basic_DB.js"></script>
+		<script type="text/javascript" src="js/Minions_ex_DB.js"></script>
+		<script type="text/javascript" src="js/Player.js"></script>
+		<script type="text/javascript" src="js/show.js"></script>
+		<script type="text/javascript" src="js/Spell.js"></script>
+		<script type="text/javascript" src="js/Spell_ex_DB.js"></script>
+		<script type="text/javascript" src="js/Spell_Basic_DB.js"></script>
+		<script type="text/javascript" src="js/Weapon.js"></script>
+		<script type="text/javascript" src="js/Weapon_Basic_DB.js"></script>
+		<script type="text/javascript" src="js/Weapon_ex_DB.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/Hearthstone.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	</head>
-	<body>
-		
+	<body class="background">
+		<div class="main">
+			<img class="battle" src="img/background.png"/>
+			<img class="Heros_0" src="img/Jaina.png"/>
+			<img class="HeroPower_0" src="img/Fireblast.png"/>
+			<p class="HeroPowerCost_0">2</p>
+			<p class="Heros_0h" id="Heros_0h">30</p>
+			<img class="Heros_1" src="img/Gul'dan.png"/>
+			<img class="HeroPower_1" src="img/Life Tap.png"/>
+			<p class="HeroPowerCost_1">2</p>
+			<p class="Heros_1h" id="Heros_1h">30</p>
+			<div id="m0" class="Minions_07">
+				<div id="m00" class="Minions_0">
+					<img id="m00p" class="Minion" src="img/Minion_Voodoo Doctor.png"/>
+					<img class="Minion_health" src="img/health.png">
+					<img class="Minion_attack" src="img/attack.png">
+					<p id="m00a" class="Minion_attack_font">2</p>
+					<p id="m00h" class="Minion_health_font">1</p>
+				</div>
+				<div id="m01" class="Minions_1">
+					<img id="m01p" class="Minion" src="img/Minion_Voodoo Doctor.png"/>
+					<img class="Minion_health" src="img/health.png">
+					<img class="Minion_attack" src="img/attack.png">
+					<p id="m01a" class="Minion_attack_font">2</p>
+					<p id="m01h" class="Minion_health_font">1</p>
+				</div>
+				<div id="m02" class="Minions_2">
+					<img id="m02p" class="Minion" src="img/Minion_Voodoo Doctor.png"/>
+					<img class="Minion_health" src="img/health.png">
+					<img class="Minion_attack" src="img/attack.png">
+					<p id="m02a" class="Minion_attack_font">2</p>
+					<p id="m02h" class="Minion_health_font">1</p>
+				</div>
+				<div id="m03" class="Minions_3">
+					<img id="m03p" class="Minion" src="img/Minion_Voodoo Doctor.png"/>
+					<img class="Minion_health" src="img/health.png">
+					<img class="Minion_attack" src="img/attack.png">
+					<p id="m03a" class="Minion_attack_font">2</p>
+					<p id="m03h" class="Minion_health_font">1</p>
+				</div>
+				<div id="m04" class="Minions_4">
+					<img id="m04p" class="Minion" src="img/Minion_Voodoo Doctor.png"/>
+					<img class="Minion_health" src="img/health.png">
+					<img class="Minion_attack" src="img/attack.png">
+					<p id="m04a" class="Minion_attack_font">2</p>
+					<p id="m04h" class="Minion_health_font">1</p>
+				</div>
+				<div id="m05" class="Minions_5">
+					<img id="m05p" class="Minion" src="img/Minion_Voodoo Doctor.png"/>
+					<img class="Minion_health" src="img/health.png">
+					<img class="Minion_attack" src="img/attack.png">
+					<p id="m05a" class="Minion_attack_font">2</p>
+					<p id="m05h" class="Minion_health_font">1</p>
+				</div>
+				<div id="m06" class="Minions_6">
+					<img id="m06p" class="Minion" src="img/Minion_Voodoo Doctor.png"/>
+					<img class="Minion_health" src="img/health.png">
+					<img class="Minion_attack" src="img/attack.png">
+					<p id="m06a" class="Minion_attack_font">2</p>
+					<p id="m06h" class="Minion_health_font">1</p>
+				</div>
+			</div>
+			<div id="m1" class="Minions_17">
+				<div id="m10" class="Minions_0">
+					<img id="m10p" class="Minion" src="img/Minion_Voodoo Doctor.png"/>
+					<img class="Minion_health" src="img/health.png">
+					<img class="Minion_attack" src="img/attack.png">
+					<p id="m10a" class="Minion_attack_font">2</p>
+					<p id="m10h" class="Minion_health_font">1</p>
+				</div>
+				<div id="m11" class="Minions_1">
+					<img id="m11p" class="Minion" src="img/Minion_Voodoo Doctor.png"/>
+					<img class="Minion_health" src="img/health.png">
+					<img class="Minion_attack" src="img/attack.png">
+					<p id="m11a" class="Minion_attack_font">2</p>
+					<p id="m11h" class="Minion_health_font">1</p>
+				</div>
+				<div id="m12" class="Minions_2">
+					<img id="m12p" class="Minion" src="img/Minion_Voodoo Doctor.png"/>
+					<img class="Minion_health" src="img/health.png">
+					<img class="Minion_attack" src="img/attack.png">
+					<p id="m12a" class="Minion_attack_font">2</p>
+					<p id="m12h" class="Minion_health_font">1</p>
+				</div>
+				<div id="m13" class="Minions_3">
+					<img id="m13p" class="Minion" src="img/Minion_Voodoo Doctor.png"/>
+					<img class="Minion_health" src="img/health.png">
+					<img class="Minion_attack" src="img/attack.png">
+					<p id="m13a" class="Minion_attack_font">2</p>
+					<p id="m13h" class="Minion_health_font">1</p>
+				</div>
+				<div id="m14" class="Minions_4">
+					<img id="m14p" class="Minion" src="img/Minion_Voodoo Doctor.png"/>
+					<img class="Minion_health" src="img/health.png">
+					<img class="Minion_attack" src="img/attack.png">
+					<p id="m14a" class="Minion_attack_font">2</p>
+					<p id="m14h" class="Minion_health_font">1</p>
+				</div>
+				<div id="m15" class="Minions_5">
+					<img id="m15p" class="Minion" src="img/Minion_Voodoo Doctor.png"/>
+					<img class="Minion_health" src="img/health.png">
+					<img class="Minion_attack" src="img/attack.png">
+					<p id="m15a" class="Minion_attack_font">2</p>
+					<p id="m15h" class="Minion_health_font">1</p>
+				</div>
+				<div id="m16" class="Minions_6">
+					<img id="m16p" class="Minion" src="img/Minion_Voodoo Doctor.png"/>
+					<img class="Minion_health" src="img/health.png">
+					<img class="Minion_attack" src="img/attack.png">
+					<p id="m16a" class="Minion_attack_font">2</p>
+					<p id="m16h" class="Minion_health_font">1</p>
+				</div>
+			</div>
+			<p class="Mana0">0/0</p>
+			<p class="Mana1">0/0</p>
+			<div>
+				<img class="Mana_0" src="img/Null_Mana.png">
+				<img class="Mana_1" src="img/Full_Mana.png">
+				<img class="Mana_2" src="img/Full_Mana.png">
+				<img class="Mana_3" src="img/Full_Mana.png">
+				<img class="Mana_4" src="img/Full_Mana.png">
+				<img class="Mana_5" src="img/Full_Mana.png">
+				<img class="Mana_6" src="img/Full_Mana.png">
+				<img class="Mana_7" src="img/Full_Mana.png">
+				<img class="Mana_8" src="img/Full_Mana.png">
+				<img class="Mana_9" src="img/Null_Mana.png">
+				<img class="Lock_0" src="img/Lock_Mana.png">
+				<img class="Lock_1" src="img/Lock_Mana.png">
+				<img class="Lock_2" src="img/Lock_Mana.png">
+				<img class="Lock_3" src="img/Lock_Mana.png">
+				<img class="Lock_4" src="img/Lock_Mana.png">
+				<img class="Lock_5" src="img/Lock_Mana.png">
+				<img class="Lock_6" src="img/Lock_Mana.png">
+				<img class="Lock_7" src="img/Lock_Mana.png">
+				<img class="Lock_8" src="img/Lock_Mana.png">
+				<img class="Lock_9" src="img/Lock_Mana.png">
+			</div>
+			<div class="Hands0">
+				<img id="Hands00" src="img/CardBack.png">
+				<img id="Hands01" src="img/CardBack.png">
+				<img id="Hands02" src="img/CardBack.png">
+				<img id="Hands03" src="img/CardBack.png">
+				<img id="Hands04" src="img/CardBack.png">
+				<img id="Hands05" src="img/CardBack.png">
+				<img id="Hands06" src="img/CardBack.png">
+				<img id="Hands07" src="img/CardBack.png">
+				<img id="Hands08" src="img/CardBack.png">
+				<img id="Hands09" src="img/CardBack.png">
+			</div>
+			<div class="Hands1">
+				<img id="Hands00" src="img/CardBack.png">
+				<img id="Hands01" src="img/CardBack.png">
+				<img id="Hands02" src="img/CardBack.png">
+				<img id="Hands03" src="img/CardBack.png">
+				<img id="Hands04" src="img/CardBack.png">
+				<img id="Hands05" src="img/CardBack.png">
+				<img id="Hands06" src="img/CardBack.png">
+				<img id="Hands07" src="img/CardBack.png">
+				<img id="Hands08" src="img/CardBack.png">
+				<img id="Hands09" src="img/CardBack.png">
+			</div>
+		</div>
 	</body>
 </html>
